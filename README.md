@@ -65,8 +65,8 @@ Deploy the manifest files to set up application/ingress/auth as necessary
 
 ### Configure Data Sources and Dashboards - Grafana
 Compare Scaling Trends by visualizing Keda scaling and predicted scaling metrics
-1. <img width="1278" alt="image" src="https://github.com/user-attachments/assets/6d686c9e-5fc4-445f-b625-f3ee5acff79f" />
-2. <img width="1285" alt="image" src="https://github.com/user-attachments/assets/d06947d7-ce62-4bac-9ae7-36a122ad3316" />
+<img width="1278" alt="image" src="https://github.com/user-attachments/assets/6d686c9e-5fc4-445f-b625-f3ee5acff79f" />
+<img width="1285" alt="image" src="https://github.com/user-attachments/assets/d06947d7-ce62-4bac-9ae7-36a122ad3316" />
 
 ### Monitor Application Scaling
 ```bash
