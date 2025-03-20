@@ -1,0 +1,29 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: traffic-app-scaler
+spec:
+  scaleTargetRef:
+    name: traffic-app
+  pollingInterval: 60
+  cooldownPeriod: 30
+  triggers:
+    - type: postgresql
+      metadata:
+        host: postgresql-dev.default.svc.cluster.local
+        port: "5432"
+        userName: postgres
+        dbName: postgres
+        sslmode: disable
+        query: |
+          SELECT MAX(replicas)
+          FROM (
+           SELECT replicas
+           FROM timeseries_forecast
+           WHERE timestamp > CURRENT_TIMESTAMP AT TIME ZONE 'US/Pacific'
+           ORDER BY timestamp
+           LIMIT 4
+          ) t;
+        targetQueryValue: "1"
+      authenticationRef:
+        name: postgres-auth

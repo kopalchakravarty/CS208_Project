@@ -1,0 +1,21 @@
+apiVersion: v1
+data:
+  postgres-password: VFN4b0cwY09pYwo=
+kind: Secret
+metadata:
+  name: postgresql-dev
+  namespace: default
+type: Opaque
+---
+apiVersion: keda.sh/v1alpha1
+kind: TriggerAuthentication
+metadata:
+  name: postgres-auth
+  namespace: default
+spec:
+  podIdentity:
+      provider: none
+  secretTargetRef:
+  - parameter: password
+    name: postgresql-dev
+    key: postgres-password
