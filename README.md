@@ -67,6 +67,8 @@ Deploy the manifest files to set up application/ingress/auth as necessary
 Compare Scaling Trends by visualizing Keda scaling and predicted scaling metrics
 <img width="1278" alt="image" src="https://github.com/user-attachments/assets/6d686c9e-5fc4-445f-b625-f3ee5acff79f" />
 <img width="1285" alt="image" src="https://github.com/user-attachments/assets/d06947d7-ce62-4bac-9ae7-36a122ad3316" />
+<img width="1284" alt="image" src="https://github.com/user-attachments/assets/08d2cd28-d969-496d-8ec5-e752f0e8f9ff" />
+
 
 ### Monitor Application Scaling
 ```bash
